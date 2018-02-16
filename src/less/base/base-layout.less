@@ -1,0 +1,39 @@
+
+html,
+body {
+	height: 100vh;
+}
+
+html {
+	font-size: @font-size;
+}
+
+body{
+    background: @bgbody;
+    color: @fonts-color;
+    margin: 0;
+    font: 1rem/@font-lineheight @avenir-medium;
+    min-width: 320px;
+}
+
+// block for page layout
+.container {
+	.width(1110);
+	margin: 0 auto;
+	max-width: 100%;
+
+}
+
+.page {
+	min-height: 99vh;
+	display: flex;
+	flex-direction: column;
+
+	&__holder {
+		flex: 1 0 auto;
+}
+
+	&__footer {
+		flex: 0 0 auto;
+	}
+}

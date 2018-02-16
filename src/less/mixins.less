@@ -1,0 +1,65 @@
+// Global values
+
+@fonts-color: #fff;
+@bgbody: #000;
+@font-size: 24px;
+@font-lineheight: 1.29rem;
+
+@link-color: #008dd6;
+@link-hover-color: #6eb413;
+
+// fonts
+@avenir-cond-bold: 'AvenirNextCondensed-Bold', Arial, Helvetica, sans-serif;
+@avenir-cond-regular: 'AvenirNextCondensed-Regular', Arial, Helvetica, sans-serif;
+@avenir-regular: 'AvenirNextRegular', Arial, Helvetica, sans-serif;
+@avenir-bold: 'AvenirNextW1G-Bold', Arial, Helvetica, sans-serif;
+@avenir-heavy: 'AvenirNextHeavy', Arial, Helvetica, sans-serif;
+@avenir-medium: 'AvenirNextW1G-Medium', Arial, Helvetica, sans-serif;
+@akzidenz-bold: 'AkzidenzGroteskBQ-BdCnd', Arial, Helvetica, sans-serif;
+@akzidenz-regular: 'AkzidenzGroteskBQ-Cnd', Arial, Helvetica, sans-serif;
+@akzidenz-light: 'AkzidenzGroteskBQ-LigCnd', Arial, Helvetica, sans-serif;
+
+
+.clearfix() {
+    &:before,
+    &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+    }
+    &:after {
+    clear: both;
+    }
+}
+
+// Placeholder text
+.placeholder(@color: @input-color-placeholder) {
+  &:-moz-placeholder            { color: @color; .opacity(1); } // Firefox 4-18
+  &::-moz-placeholder           { color: @color; .opacity(1); } // Firefox 19+
+  &:-ms-input-placeholder       { color: @color; .opacity(1); } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; .opacity(1); } // Safari and Chrome
+}
+
+.radius(@radius){
+    border-radius: @radius;
+}
+.border-box{
+  box-sizing: border-box;
+}
+
+// mixins for sizes
+
+.width(@inputWidthSize) {
+  width: round((@inputWidthSize/24) * 1rem, 2);
+}
+.height(@inputHeightSize) {
+  height: round((@inputHeightSize/24) * 1rem, 2);
+}
+.font-size(@inputFontSize) {
+  font-size: round((@inputFontSize/24) * 1rem, 2);
+}
+.line-height(@inputFontHeight) {
+  line-height: round((@inputFontHeight/24) * 1rem, 2);
+}
+
+@tablet: ~'(max-width: 1023px)';
+@mobile: ~'(max-width: 758px)';

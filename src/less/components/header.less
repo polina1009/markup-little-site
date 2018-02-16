@@ -1,0 +1,159 @@
+
+
+.header {
+  position: relative;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 65px;
+
+    @media @tablet {
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+
+    @media @mobile {
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    .width(132);
+    .height(28);
+
+    @media @tablet {
+      width: auto;
+      display: block;
+    }
+  }
+
+  &__nav {
+    display: inline-block;
+
+    &-list {
+      display: flex;
+    }
+
+    &-link {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: @akzidenz-light;
+      .font-size(24);
+      font-stretch: ultra-expanded;
+      color: #ffffff;
+      padding: 0 34px 0;
+      letter-spacing: 8px;
+    }
+
+    .active {
+      color: #eabb1d;
+      font-family: @avenir-cond-bold;
+      font-weight: 900;
+    }
+
+    @media @tablet {
+      display: none;
+    }
+  }
+
+  .mob-back-cont {
+    @media @tablet {
+      position: fixed;
+      right: 0;
+      left: 0;
+      top: 60px;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.8);
+      z-index: 11;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media @mobile {
+      position: fixed;
+      right: 0;
+      left: 0;
+      top: 60px;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.8);
+      z-index: 11;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header__nav-list {
+      @media @tablet {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+        z-index: 15;
+
+      }
+
+      @media @mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+        z-index: 15;
+
+      }
+    }
+
+
+  }
+
+
+  &__mobile-nav {
+    display: none;
+
+    @media @tablet {
+      position: absolute;
+      right: 60px;
+      top: 3px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+
+  &__lang-list {
+    display: inline-flex;
+
+    @media @tablet {
+      display: none;
+    }
+  }
+
+  &__lang-btn {
+    text-transform: uppercase;
+    font-family: @akzidenz-light;
+    .font-size(24);
+    .line-height(1);
+    color: #ffffff;
+    padding: 0 10px 0;
+    text-decoration: none;
+    letter-spacing: 3px;
+  }
+  .active {
+    color: #eabb1d;
+    font-family: @akzidenz-regular;
+  }
+
+}
+
+
+
+
